@@ -4,11 +4,6 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 
-//Load in API Key
-// require("dotenv").config();
-// let keys = require('./keys.js');
-// let apiKey = keys.ny_times.api_key;
-
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
