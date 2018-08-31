@@ -19,7 +19,6 @@ export default {
       publishedDate: favData.pub_date,
       Preview: favData.snippet
     }
-    console.log(favJSON);
     return axios.post("/api/story",favJSON);
   },
   // Gets the book with the given id
