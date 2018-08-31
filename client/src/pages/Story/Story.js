@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import Modal from 'react-modal';
 
 
-//import FavBtn from "../../components/FavBtn";
-//import UnFavBtn from "../../components/UnFavBtn";
-//import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-//import { Link } from "react-router-dom";
 import { Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
@@ -20,7 +16,6 @@ const modalStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%'
-    // transform             : 'translate(-50%, -50%)'
   }
 };
 
@@ -35,23 +30,6 @@ class Story extends Component {
     endYear: "",
     topic: ""
   };
-
-  componentDidMount() {
-    // this.loadStories();
-  }
-
-  // loadStories = () => {
-  //   console.log(this.state.topic)
-  //   API.getStories(this.state.topic, "2018", "2019")
-  //     .then(res => this.setState({ stories: res.data.response.docs }))
-  //     .catch(err => console.log(err));
-  // };
-
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //     .then(res => this.loadBooks())
-  //     .catch(err => console.log(err));
-  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -88,9 +66,6 @@ class Story extends Component {
   addFavorite = (story) => {
     API.addFav(story);
   }
-
-
-
 
   render() {
     return (
