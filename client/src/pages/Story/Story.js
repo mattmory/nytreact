@@ -40,13 +40,14 @@ class Story extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    let regex = /^\d{4}$/;
     if (this.state.topic === "" || this.state.topic === null) {
       this.setState({ errorMessage: "Topic cannot be blank", modalIsOpen: true })
     }
-    else if (this.state.startYear != null && parseInt(this.state.startYear,10) < 1900) {
+    else if ((this.state.startYear != null && parseInt(this.state.startYear,10) < 1900) || regex.test(this.state.startYear) === false) {
       this.setState({ errorMessage: "The start year must be after 1900", modalIsOpen: true })
     }
-    else if (this.state.endYear != null && parseInt(this.state.endYear,10) < 1900) {
+    else if ((this.state.endYear != null && parseInt(this.state.endYear,10) < 1900) || regex.test(this.state.endYear) === false) {
       this.setState({ errorMessage: "The end year must be after 1900", modalIsOpen: true })
     }
     else if (this.state.startYear != null && this.state.endYear != null && parseInt(this.state.endYear,10) < parseInt(this.state.startYear,10)) {
