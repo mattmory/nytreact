@@ -1,0 +1,32 @@
+.navbar {
+    margin: 0 auto;
+      padding: 0;
+      width: 95%;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: grey;
+
+      background-color: #FFFFFF;
+    }
+  
+    .navbar-heading {
+      background-color: #FFFFFF;
+      border: 0;
+    }
+  
+   .navbar-brand {
+      background-color: #4aaaa5;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      margin: 0;
+    }
